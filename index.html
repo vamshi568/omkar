@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bappa Youth</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Cinzel+Decorative:wght@400;700;900&family=Cookie&family=Gruppo&family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
+    <body>
+    
+
+    <header>
+        <div class="logo">
+            <img src="https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289165/Bappa%20Youth%20All%20years%20Photos/Backgrounds/channels4_profile_xz6wnl.jpg" alt="Bappa Youth Logo">
+            
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#celebration">Celebrations</a></li>
+                <li><a href="#memories">Memories</a></li>
+                <li><a href="#youth">Youth Members</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#follow">Follow Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <img class="hero-image" src="https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289163/Bappa%20Youth%20All%20years%20Photos/Backgrounds/1_Home_Background_n6vhsw.jpg" alt="Hero Image">
+        <div>
+            <h1 class="cinzel-decorative-regular">BAPPA YOUTH</h1>
+            <p class="charm-regular">| SINCE 2020 |</p>
+            <img  src="public\accets\Copy of Bappa Youth WEB.png" alt="" srcset="">
+        </div>
+
+        <a href="#celebration" class="view-more-button">View more</a>
+    </section>
+
+    <section id="celebration" class="celebration">
+        <div class="celebrate" >
+
+
+        <h2 class="cinzel-decorative-regular">Celebration of Bappa Youth</h2>
+        <div class="years charm-regular">
+           
+                <a href="#memories" onclick="showGallery(2020)">2020 Bappa</a>
+                <a href="#memories" onclick="showGallery(2021)">2021 Bappa</a>
+                <a href="#memories" onclick="showGallery(2022)">2022 Bappa</a>
+                <a href="#memories" onclick="showGallery(2023)">2023 Bappa</a>
+                <a href="#memories" onclick="showGallery(2024)">2024 Bappa</a>
+                <a href="#memories" onclick="showGallery(20241)">2024 Durga</a>
+                
+                
+            
+           
+        </div>
+        </div>
+    </section>
+
+    <section id="memories" class="memories">
+        <h2 id="memories-year" class="cinzel-decorative-regular">Memories</h2>
+        <div class="memory-grid" id="memoryGrid">
+        </div>
+
+        <script>
+            const galleries = {
+        2020:[
+  'http://res.cloudinary.com/dbs9akgm5/image/upload/v1740289167/Bappa%20Youth%20All%20years%20Photos/Bappa%20Youth%202020/1_wsfwsr.jpg',
+  'http://res.cloudinary.com/dbs9akgm5/image/upload/v1740289166/Bappa%20Youth%20All%20years%20Photos/Bappa%20Youth%202020/2_f0hhqr.jpg',
+  'http://res.cloudinary.com/dbs9akgm5/image/upload/v1740289167/Bappa%20Youth%20All%20years%20Photos/Bappa%20Youth%202020/3_l38fyz.jpg',
+  'http://res.cloudinary.com/dbs9akgm5/image/upload/v1740289167/Bappa%20Youth%20All%20years%20Photos/Bappa%20Youth%202020/4.jpg'     
+],
+2021:[
+  'http://res.cloudinary.com/dbs9akgm5/image/upload/v1740289168/Bappa%20Youth%20All%20years%20Photos/Bappa%20Youth%202021/1_m3owdy.jpg',
+  'http://res.cloudinary.com/dbs9akgm5/image/upload/v1740289168/Bappa%20Youth%20All%20years%20Photos/Bappa%20Youth%202021/10_dqtpog.jpg',
+  'http://res.cloudinary.com/dbs9akgm5/image/upload/v1740289168/Bappa%20Youth%20All%20years%20Photos/Bappa%20Youth%202021/11_nfwldm.jpg',
+  'http://res.cloudinary.com/dbs9akgm5/image/upload/v1740289168/Bappa%20Youth%20All%20years%20Photos/Bappa%20Youth%202021/12_atipky.jpg',
+  'http://res.cloudinary.com/dbs9akgm5/image/upload/v1740289168/Bappa%20Youth%20All%20years%20Photos/Bappa%20Youth%202021/13_wfiazd.jpg',
+  'http://res.cloudinary.com/dbs9akgm5/image/upload/v1740289169/Bappa%20Youth%20All%20years%20Photos/Bappa%20Youth%202021/2_zshmak.jpg',
+  'http://res.cloudinary.com/dbs9akgm5/image/upload/v1740289169/Bappa%20Youth%20All%20years%20Photos/Bappa%20Youth%202021/3_wismj3.jpg',
+  'http://res.cloudinary.com/dbs9akgm5/image/upload/v1740289171/Bappa%20Youth%20All%20years%20Photos/Bappa%20Youth%202021/4_oyhsed.jpg',
+  'http://res.cloudinary.com/dbs9akgm5/image/upload/v1740289172/Bappa%20Youth%20All%20years%20Photos/Bappa%20Youth%202021/5_ecl0ze.jpg',
+  'http://res.cloudinary.com/dbs9akgm5/image/upload/v1740289172/Bappa%20Youth%20All%20years%20Photos/Bappa%20Youth%202021/6_hwe0pi.jpg',
+  'http://res.cloudinary.com/dbs9akgm5/image/upload/v1740289173/Bappa%20Youth%20All%20years%20Photos/Bappa%20Youth%202021/7_gpsgbq.jpg',
+  'http://res.cloudinary.com/dbs9akgm5/image/upload/v1740289173/Bappa%20Youth%20All%20years%20Photos/Bappa%20Youth%202021/8_yfz6a5.jpg',
+  'http://res.cloudinary.com/dbs9akgm5/image/upload/v1740289173/Bappa%20Youth%20All%20years%20Photos/Bappa%20Youth%202021/9_af352n.jpg'
+]
+, 2022:[
+  'http://res.cloudinary.com/dbs9akgm5/image/upload/v1740289173/Bappa%20Youth%20All%20years%20Photos/Bappa%20Youth%202022/1_sqvnkt.jpg',
+  'http://res.cloudinary.com/dbs9akgm5/image/upload/v1740289173/Bappa%20Youth%20All%20years%20Photos/Bappa%20Youth%202022/2_xvsbsu.jpg',
+  'http://res.cloudinary.com/dbs9akgm5/image/upload/v1740289173/Bappa%20Youth%20All%20years%20Photos/Bappa%20Youth%202022/3_gqq64s.jpg',
+  'http://res.cloudinary.com/dbs9akgm5/image/upload/v1740289173/Bappa%20Youth%20All%20years%20Photos/Bappa%20Youth%202022/4_lkm3nb.jpg',
+  'http://res.cloudinary.com/dbs9akgm5/image/upload/v1740289174/Bappa%20Youth%20All%20years%20Photos/Bappa%20Youth%202022/5_ni7qu9.jpg',
+  'http://res.cloudinary.com/dbs9akgm5/image/upload/v1740289174/Bappa%20Youth%20All%20years%20Photos/Bappa%20Youth%202022/6_ept46f.jpg',
+  'http://res.cloudinary.com/dbs9akgm5/image/upload/v1740289176/Bappa%20Youth%20All%20years%20Photos/Bappa%20Youth%202022/7_ikkrag.jpg',
+  'http://res.cloudinary.com/dbs9akgm5/image/upload/v1740289176/Bappa%20Youth%20All%20years%20Photos/Bappa%20Youth%202022/8_feste3.jpg',
+  'http://res.cloudinary.com/dbs9akgm5/image/upload/v1740289176/Bappa%20Youth%20All%20years%20Photos/Bappa%20Youth%202022/9_d6xkfr.jpg'
+]
+, 2023:[
+    'http://res.cloudinary.com/dbs9akgm5/image/upload/v1740289176/Bappa%20Youth%20All%20years%20Photos/Bappa%20Youth%202023/1_pr2bvg.jpg',
+  'http://res.cloudinary.com/dbs9akgm5/image/upload/v1740289176/Bappa%20Youth%20All%20years%20Photos/Bappa%20Youth%202023/10_g3d6ng.jpg',
+  'http://res.cloudinary.com/dbs9akgm5/image/upload/v1740289177/Bappa%20Youth%20All%20years%20Photos/Bappa%20Youth%202023/11_blmzy7.jpg',
+  'http://res.cloudinary.com/dbs9akgm5/image/upload/v1740289177/Bappa%20Youth%20All%20years%20Photos/Bappa%20Youth%202023/12_esnegm.jpg',
+  'http://res.cloudinary.com/dbs9akgm5/image/upload/v1740289177/Bappa%20Youth%20All%20years%20Photos/Bappa%20Youth%202023/13_ybrgvm.jpg',
+  'http://res.cloudinary.com/dbs9akgm5/image/upload/v1740289177/Bappa%20Youth%20All%20years%20Photos/Bappa%20Youth%202023/14_slykqa.jpg',
+  'http://res.cloudinary.com/dbs9akgm5/image/upload/v1740289177/Bappa%20Youth%20All%20years%20Photos/Bappa%20Youth%202023/15_c8i6f4.jpg',
+  'http://res.cloudinary.com/dbs9akgm5/image/upload/v1740289177/Bappa%20Youth%20All%20years%20Photos/Bappa%20Youth%202023/16_vxoaet.jpg',
+  'http://res.cloudinary.com/dbs9akgm5/image/upload/v1740289178/Bappa%20Youth%20All%20years%20Photos/Bappa%20Youth%202023/2_ocvyy4.jpg',
+  'http://res.cloudinary.com/dbs9akgm5/image/upload/v1740289180/Bappa%20Youth%20All%20years%20Photos/Bappa%20Youth%202023/3_vebcfq.jpg',
+  'http://res.cloudinary.com/dbs9akgm5/image/upload/v1740289180/Bappa%20Youth%20All%20years%20Photos/Bappa%20Youth%202023/4_z59yru.jpg',
+  'http://res.cloudinary.com/dbs9akgm5/image/upload/v1740289180/Bappa%20Youth%20All%20years%20Photos/Bappa%20Youth%202023/5_awkvse.jpg',
+  'http://res.cloudinary.com/dbs9akgm5/image/upload/v1740289180/Bappa%20Youth%20All%20years%20Photos/Bappa%20Youth%202023/6_nxn47p.jpg',
+  'http://res.cloudinary.com/dbs9akgm5/image/upload/v1740289180/Bappa%20Youth%20All%20years%20Photos/Bappa%20Youth%202023/7_hccszx.jpg',
+  'http://res.cloudinary.com/dbs9akgm5/image/upload/v1740289181/Bappa%20Youth%20All%20years%20Photos/Bappa%20Youth%202023/8_w38c5m.jpg',
+  'http://res.cloudinary.com/dbs9akgm5/image/upload/v1740289182/Bappa%20Youth%20All%20years%20Photos/Bappa%20Youth%202023/9_no1xef.jpg'
+]
+, 2024:[
+  'http://res.cloudinary.com/dbs9akgm5/image/upload/v1740289182/Bappa%20Youth%20All%20years%20Photos/Bappa%20Youth%202024/1_sk12yy.jpg',
+  'http://res.cloudinary.com/dbs9akgm5/image/upload/v1740289232/Bappa%20Youth%20All%20years%20Photos/Bappa%20Youth%202024/1_zvw1x7.jpg',
+  'http://res.cloudinary.com/dbs9akgm5/image/upload/v1740289231/Bappa%20Youth%20All%20years%20Photos/Bappa%20Youth%202024/10_i6omxx.jpg',
+  'http://res.cloudinary.com/dbs9akgm5/image/upload/v1740289231/Bappa%20Youth%20All%20years%20Photos/Bappa%20Youth%202024/11_bhsbd5.jpg',
+  'http://res.cloudinary.com/dbs9akgm5/image/upload/v1740289232/Bappa%20Youth%20All%20years%20Photos/Bappa%20Youth%202024/12_qfafkh.jpg',
+  'http://res.cloudinary.com/dbs9akgm5/image/upload/v1740289233/Bappa%20Youth%20All%20years%20Photos/Bappa%20Youth%202024/13_sh4oif.jpg',
+  'http://res.cloudinary.com/dbs9akgm5/image/upload/v1740289232/Bappa%20Youth%20All%20years%20Photos/Bappa%20Youth%202024/14_zy6oun.jpg',
+  'http://res.cloudinary.com/dbs9akgm5/image/upload/v1740289207/Bappa%20Youth%20All%20years%20Photos/Bappa%20Youth%202024/15_cye2vl.jpg',
+  'http://res.cloudinary.com/dbs9akgm5/image/upload/v1740289208/Bappa%20Youth%20All%20years%20Photos/Bappa%20Youth%202024/16_e1mzjh.jpg',
+  'http://res.cloudinary.com/dbs9akgm5/image/upload/v1740289210/Bappa%20Youth%20All%20years%20Photos/Bappa%20Youth%202024/17_nydtn4.jpg',
+  'http://res.cloudinary.com/dbs9akgm5/image/upload/v1740289210/Bappa%20Youth%20All%20years%20Photos/Bappa%20Youth%202024/2_lwocqe.jpg',
+  'http://res.cloudinary.com/dbs9akgm5/image/upload/v1740289211/Bappa%20Youth%20All%20years%20Photos/Bappa%20Youth%202024/3_evekpe.jpg',
+  'http://res.cloudinary.com/dbs9akgm5/image/upload/v1740289211/Bappa%20Youth%20All%20years%20Photos/Bappa%20Youth%202024/4_uisjcq.jpg',
+  'http://res.cloudinary.com/dbs9akgm5/image/upload/v1740289212/Bappa%20Youth%20All%20years%20Photos/Bappa%20Youth%202024/5_zsfnmt.jpg',
+  'http://res.cloudinary.com/dbs9akgm5/image/upload/v1740289212/Bappa%20Youth%20All%20years%20Photos/Bappa%20Youth%202024/6_e2kw0g.jpg',
+  'http://res.cloudinary.com/dbs9akgm5/image/upload/v1740289212/Bappa%20Youth%20All%20years%20Photos/Bappa%20Youth%202024/7_xtghen.jpg',
+  'http://res.cloudinary.com/dbs9akgm5/image/upload/v1740289213/Bappa%20Youth%20All%20years%20Photos/Bappa%20Youth%202024/8_c8erul.jpg',
+  'http://res.cloudinary.com/dbs9akgm5/image/upload/v1740289213/Bappa%20Youth%20All%20years%20Photos/Bappa%20Youth%202024/9_vyy1nn.jpg'
+],
+20241:[
+  'http://res.cloudinary.com/dbs9akgm5/image/upload/v1740289214/Bappa%20Youth%20All%20years%20Photos/Durga%20Matha%202024/1_l2zril.jpg',
+  'http://res.cloudinary.com/dbs9akgm5/image/upload/v1740289214/Bappa%20Youth%20All%20years%20Photos/Durga%20Matha%202024/10_pljnzf.jpg',
+  'http://res.cloudinary.com/dbs9akgm5/image/upload/v1740289214/Bappa%20Youth%20All%20years%20Photos/Durga%20Matha%202024/11_e6cqfp.jpg',
+  'http://res.cloudinary.com/dbs9akgm5/image/upload/v1740289215/Bappa%20Youth%20All%20years%20Photos/Durga%20Matha%202024/12_kmtjep.jpg',
+  'http://res.cloudinary.com/dbs9akgm5/image/upload/v1740289216/Bappa%20Youth%20All%20years%20Photos/Durga%20Matha%202024/13_qkwtjo.jpg',
+  'http://res.cloudinary.com/dbs9akgm5/image/upload/v1740289216/Bappa%20Youth%20All%20years%20Photos/Durga%20Matha%202024/14_nfcre4.jpg',
+  'http://res.cloudinary.com/dbs9akgm5/image/upload/v1740289216/Bappa%20Youth%20All%20years%20Photos/Durga%20Matha%202024/15_lslvgt.jpg',
+  'http://res.cloudinary.com/dbs9akgm5/image/upload/v1740289217/Bappa%20Youth%20All%20years%20Photos/Durga%20Matha%202024/16_bhljmi.jpg',
+  'http://res.cloudinary.com/dbs9akgm5/image/upload/v1740289217/Bappa%20Youth%20All%20years%20Photos/Durga%20Matha%202024/2_nbxm6a.jpg',
+  'http://res.cloudinary.com/dbs9akgm5/image/upload/v1740289218/Bappa%20Youth%20All%20years%20Photos/Durga%20Matha%202024/3_qjp1at.jpg',
+  'http://res.cloudinary.com/dbs9akgm5/image/upload/v1740289218/Bappa%20Youth%20All%20years%20Photos/Durga%20Matha%202024/4_qzw13f.jpg',
+  'http://res.cloudinary.com/dbs9akgm5/image/upload/v1740289219/Bappa%20Youth%20All%20years%20Photos/Durga%20Matha%202024/5_aelpt6.jpg',
+  'http://res.cloudinary.com/dbs9akgm5/image/upload/v1740289219/Bappa%20Youth%20All%20years%20Photos/Durga%20Matha%202024/6_oyzizd.jpg',
+  'http://res.cloudinary.com/dbs9akgm5/image/upload/v1740289222/Bappa%20Youth%20All%20years%20Photos/Durga%20Matha%202024/7_l5i1rf.jpg',
+  'http://res.cloudinary.com/dbs9akgm5/image/upload/v1740289220/Bappa%20Youth%20All%20years%20Photos/Durga%20Matha%202024/8_scq9k7.jpg',
+  'http://res.cloudinary.com/dbs9akgm5/image/upload/v1740289220/Bappa%20Youth%20All%20years%20Photos/Durga%20Matha%202024/9_ezlcvk.jpg'
+]}
+function showGallery(year) {
+        const memoryGrid = document.getElementById('memoryGrid');
+        memoryGrid.innerHTML = ''; // Clear previous images
+
+        if (!galleries[year]) {
+            memoryGrid.innerHTML = '<p>No images available for this year.</p>';
+            return;
+        }
+
+        galleries[year].forEach(url => {
+            const img = document.createElement('img');
+            img.src = url;
+            img.alt = `Memory ${year}`;
+            
+            memoryGrid.appendChild(img);
+            
+            document.getElementById('memories-year').innerText = year===20241?`Memories of 2024 Durga`:`Memories of ${year} Bappa`;
+        });
+    }
+    showGallery(2024);
+        </script>
+        </div>
+    </section>
+
+    <section id="youth" class="youth-members">
+    <h2 class="cinzel-decorative-regular member-title">Youth Members</h2>
+    <div class="member-grid" >
+        <div><a href="#yuvaraju"><img src="https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289231/Bappa%20Youth%20All%20years%20Photos/Youth%20Members/yuvaraju_1_g2rwke.jpg" alt="Member 25"><p>Yuvaraju</p></a></div>
+        <div><a href="#nayanesh"><img src="https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289225/Bappa%20Youth%20All%20years%20Photos/Youth%20Members/nayanesh_1_eljp6k.jpg" alt="Member 12"><p>Nayanesh</p></a></div>
+        <div><a href="#pavan"><img src="https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289226/Bappa%20Youth%20All%20years%20Photos/Youth%20Members/pavan_1_oixdof.jpg" alt="Member 14"><p>Pavan</p></a></div>
+        <div><a href="#ajay"><img src="https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289222/Bappa%20Youth%20All%20years%20Photos/Youth%20Members/ajay_1_qwzujw.jpg" alt="Member 2"><p>Ajay</p></a></div>
+        <div><a href="#chintu"><img src="https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289223/Bappa%20Youth%20All%20years%20Photos/Youth%20Members/Chintu_1_gdkxrw.jpg" alt="Member 6"><p>Chintu</p></a></div>
+        <div><a href="#abhinav"><img src="https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289220/Bappa%20Youth%20All%20years%20Photos/Youth%20Members/Abhinav_1_b4tyyu.jpg" alt="Member 1"><p>Abhinav</p></a></div>
+        <div><a href="#akshay"><img src="https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289222/Bappa%20Youth%20All%20years%20Photos/Youth%20Members/Akshay_1_rtq65j.jpg" alt="Member 3"><p>Akshay</p></a></div>
+        <div><a href="#durga"><img src="https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289224/Bappa%20Youth%20All%20years%20Photos/Youth%20Members/Durga_1_jjjuvj.jpg" alt="Member 7"><p>Durga</p></a></div>
+        <div><a href="#kalyan"><img src="https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289224/Bappa%20Youth%20All%20years%20Photos/Youth%20Members/kalyan_1_hzgeqk.jpg" alt="Member 8"><p>Kalyan</p></a></div>
+        <div><a href="#kittu"><img src="https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289224/Bappa%20Youth%20All%20years%20Photos/Youth%20Members/Kittu_1_kdsphq.jpg" alt="Member 9"><p>Kittu</p></a></div>
+        <div><a href="#mittu"><img src="https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289225/Bappa%20Youth%20All%20years%20Photos/Youth%20Members/Mittu_1_oddkgr.jpg" alt="Member 11"><p>Mittu</p></a></div>
+        <div><a href="#pintu"><img src="https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289226/Bappa%20Youth%20All%20years%20Photos/Youth%20Members/Pintu_1_q00nkf.jpg" alt="Member 15"><p>Pintu</p></a></div>
+        <div><a href="#prem"><img src="https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289226/Bappa%20Youth%20All%20years%20Photos/Youth%20Members/prem_1_qnfmee.jpg" alt="Member 16"><p>Prem</p></a></div>
+        <div><a href="#raju"><img src="https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289227/Bappa%20Youth%20All%20years%20Photos/Youth%20Members/raju_1_lgw83g.jpg" alt="Member 18"><p>Raju</p></a></div>
+        <div><a href="#rohit"><img src="https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289229/Bappa%20Youth%20All%20years%20Photos/Youth%20Members/rohith_1_smlymt.jpg" alt="Member 20"><p>Rohith</p></a></div>
+        <div><a href="#revanth"><img src="https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289228/Bappa%20Youth%20All%20years%20Photos/Youth%20Members/revanth_1_ykuwri.jpg" alt="Member 19"><p>Revanth</p></a></div>
+        <div><a href="#sunny"><img src="https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289229/Bappa%20Youth%20All%20years%20Photos/Youth%20Members/sunny_1_yhghli.jpg" alt="Member 22"><p>Sunny</p></a></div>
+        <div><a href="#vamshi"><img src="https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289230/Bappa%20Youth%20All%20years%20Photos/Youth%20Members/vamshi_1_bah1mc.jpg" alt="Member 24"><p>Vamshi</p></a></div>
+        <div><a href="#srivardhan"><img src="https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289229/Bappa%20Youth%20All%20years%20Photos/Youth%20Members/Srivardhan_1_jka1gs.jpg" alt="Member 21"><p>Srivardhan</p></a></div>
+        <div><a href="#trinkul"><img src="https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289230/Bappa%20Youth%20All%20years%20Photos/Youth%20Members/Trinkul_1_zaumjo.jpg" alt="Member 23"><p>Trinkul</p></a></div>
+        <div><a href="#lallu"><img src="https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289225/Bappa%20Youth%20All%20years%20Photos/Youth%20Members/lallu_1_ts8zk8.jpg" alt="Member 10"><p>Lallu</p></a></div>
+        <div><a href="#rahul"><img src="https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289227/Bappa%20Youth%20All%20years%20Photos/Youth%20Members/rahul_1_dz2vuu.jpg" alt="Member 17"><p>Rahul</p></a></div>
+        <div><a href="#bunny"><img src="https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289222/Bappa%20Youth%20All%20years%20Photos/Youth%20Members/BUnny_1_zkcmi9.jpg" alt="Member 4"><p>Bunny</p></a></div>
+        <div><a href="#charan"><img src="https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289223/Bappa%20Youth%20All%20years%20Photos/Youth%20Members/charan_1_n8kitq.jpg" alt="Member 5"><p>Charan</p></a></div>
+        <div><a href="#rocky"><img src="https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289229/Bappa%20Youth%20All%20years%20Photos/Youth%20Members/Rocky_1_upqius.jpg" alt="Member 20"><p>Rocky</p></a></div>
+        <div><a href="#omkar"><img src="https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289227/Bappa%20Youth%20All%20years%20Photos/Youth%20Members/Omkar_1_l6waac.jpg" alt="Member 13"><p>Omkar</p></a></div>
+    </div>
+</section>
+
+<section id="yuvaraju" class="member-details">
+    <div class="member" style="background-image: url('https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289231/Bappa%20Youth%20All%20years%20Photos/Youth%20Members/Yuvaraju_2_lg6bhp.jpg');">
+        <div>
+            <h2 class="rowdies-light">Chityala <br>Yuvaraju</h2>
+            <h3 class="gruppo-regular">Youth Supporter</h3>
+            <a class="cookie-regular" href="">
+                <img src="https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289163/Bappa%20Youth%20All%20years%20Photos/Backgrounds/instagram_1_vcy2aw.svg" alt="In">
+                Yuvaraju
+            </a>
+            <img class="member-image" src="https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289231/Bappa%20Youth%20All%20years%20Photos/Youth%20Members/yuvaraju_1_g2rwke.jpg" alt="Member 25">
+        </div>
+    </div>
+</section>
+
+<section id="nayanesh" class="member-details">
+    <div class="member" style="background-image: url('https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289225/Bappa%20Youth%20All%20years%20Photos/Youth%20Members/Nayanesh_2_jfovke.jpg');">
+        <div>
+            <h2 class="rowdies-light">ankalam Nayanesh</h2>
+            <h3 class="gruppo-regular">Youth President</h3>
+            <a class="cookie-regular" href="">
+                <img src="https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289163/Bappa%20Youth%20All%20years%20Photos/Backgrounds/instagram_1_vcy2aw.svg" alt="In">
+                @nayanesh
+            </a>
+            <img class="member-image" src="https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289225/Bappa%20Youth%20All%20years%20Photos/Youth%20Members/nayanesh_1_eljp6k.jpg" alt="Member 12">
+        </div>
+    </div>
+</section>
+
+<section id="pavan" class="member-details">
+    <div class="member black" style="background-image: url('https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289226/Bappa%20Youth%20All%20years%20Photos/Youth%20Members/pavan_2_jawnwe.jpg');">
+        <div>
+            <h2 class="rowdies-light">Pavan</h2>
+            <h3 class="gruppo-regular">Youth Vice President</h3>
+            <a class="cookie-regular" href="">
+                <img src="https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289165/Bappa%20Youth%20All%20years%20Photos/Backgrounds/instagram_h1h2zk.svg" alt="In">
+                @pavan
+            </a>
+            <img class="member-image" src="https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289226/Bappa%20Youth%20All%20years%20Photos/Youth%20Members/pavan_1_oixdof.jpg" alt="Member 14">
+        </div>
+    </div>
+</section>
+
+<section id="ajay" class="member-details">
+    <div class="member black" style="background-image: url('https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289222/Bappa%20Youth%20All%20years%20Photos/Youth%20Members/ajay_2_odhf8s.jpg');">
+        <div>
+            <h2 class="rowdies-light">Ajay kairamkonda</h2>
+            <h3 class="gruppo-regular">Youth Secretary</h3>
+            <a class="cookie-regular" href="">
+                <img src="https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289165/Bappa%20Youth%20All%20years%20Photos/Backgrounds/instagram_h1h2zk.svg" alt="In">
+                @ajay
+            </a>
+            <img class="member-image" src="https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289222/Bappa%20Youth%20All%20years%20Photos/Youth%20Members/ajay_1_qwzujw.jpg" alt="Member 2">
+        </div>
+    </div>
+</section>
+
+<section id="chintu" class="member-details">
+    <div class="member right" style="background-image: url('https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289223/Bappa%20Youth%20All%20years%20Photos/Youth%20Members/Chintu_2_efimqq.jpg');">
+        <div>
+            <h2 class="rowdies-light">chepuri ramakrishna</h2>
+            <h3 class="gruppo-regular">Youth Cashier</h3>
+            <a class="cookie-regular" href="">
+                <img src="https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289163/Bappa%20Youth%20All%20years%20Photos/Backgrounds/instagram_1_vcy2aw.svg" alt="In">
+                @chintu
+            </a>
+            <img class="member-image" src="https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289223/Bappa%20Youth%20All%20years%20Photos/Youth%20Members/Chintu_1_gdkxrw.jpg" alt="Member 6">
+        </div>
+    </div>
+</section>
+
+<section id="abhinav" class="member-details">
+    <div class="member right" style="background-image: url('https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289220/Bappa%20Youth%20All%20years%20Photos/Youth%20Members/Abhinav_2_rbtk5h.jpg')">
+        <div>
+            <h2 class="rowdies-light">ABHINAV</h2>
+            <h3 class="gruppo-regular">Youth Member</h3>
+            <a class="cookie-regular" href="">
+                <img src="https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289163/Bappa%20Youth%20All%20years%20Photos/Backgrounds/instagram_1_vcy2aw.svg" alt="In">
+                @abhinav
+            </a>
+            <img class="member-image" src="https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289220/Bappa%20Youth%20All%20years%20Photos/Youth%20Members/Abhinav_1_b4tyyu.jpg" alt="Member 1">
+        </div>
+    </div>
+</section>
+
+<section id="akshay" class="member-details">
+    <div class="member black" style="background-image: url('https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289222/Bappa%20Youth%20All%20years%20Photos/Youth%20Members/akshay_2_mqpckm.jpg');">
+        <div>
+            <h2 class="rowdies-light">Akshay kairamkonda</h2>
+            <h3 class="gruppo-regular">Youth member</h3>
+            <a class="cookie-regular" href="">
+                <img src="https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289165/Bappa%20Youth%20All%20years%20Photos/Backgrounds/instagram_h1h2zk.svg" alt="In">
+                @akshay
+            </a>
+            <img class="member-image" src="https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289222/Bappa%20Youth%20All%20years%20Photos/Youth%20Members/Akshay_1_rtq65j.jpg" alt="Member 3">
+        </div>
+    </div>
+</section>
+
+<section id="durga" class="member-details">
+    <div class="member" style="background-image: url('https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289224/Bappa%20Youth%20All%20years%20Photos/Youth%20Members/Durga_2_u2ixko.jpg');">
+        <div>
+            <h2 class="rowdies-light">Durga prasad</h2>
+            <h3 class="gruppo-regular">Youth member</h3>
+            <a class="cookie-regular" href="">
+                <img src="https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289163/Bappa%20Youth%20All%20years%20Photos/Backgrounds/instagram_1_vcy2aw.svg" alt="In">
+                @durga
+            </a>
+            <img class="member-image" src="https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289224/Bappa%20Youth%20All%20years%20Photos/Youth%20Members/Durga_1_jjjuvj.jpg" alt="Member 7">
+        </div>
+    </div>
+</section>
+
+<section id="kalyan" class="member-details">
+    <div class="member" style="background-image: url('https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289224/Bappa%20Youth%20All%20years%20Photos/Youth%20Members/kalyan_2_acgrzq.jpg');">
+        <div>
+            <h2 class="rowdies-light">Kalyan</h2>
+            <h3 class="gruppo-regular">Youth member</h3>
+            <a class="cookie-regular" href="">
+                <img src="https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289163/Bappa%20Youth%20All%20years%20Photos/Backgrounds/instagram_1_vcy2aw.svg" alt="In">
+                @kalyan
+            </a>
+            <img class="member-image" src="https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289224/Bappa%20Youth%20All%20years%20Photos/Youth%20Members/kalyan_1_hzgeqk.jpg" alt="Member 8">
+        </div>
+    </div>
+</section>
+
+<section id="kittu" class="member-details">
+    <div class="member right" style="background-image: url('https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289224/Bappa%20Youth%20All%20years%20Photos/Youth%20Members/Kittu_2_me6jbf.jpg');">
+        <div>
+            <h2 class="rowdies-light">pakka saikrishna</h2>
+            <h3 class="gruppo-regular">Youth member</h3>
+            <a class="cookie-regular" href="">
+                <img src="https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289163/Bappa%20Youth%20All%20years%20Photos/Backgrounds/instagram_1_vcy2aw.svg" alt="In">
+                @kittu
+            </a>
+            <img class="member-image" src="https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289224/Bappa%20Youth%20All%20years%20Photos/Youth%20Members/Kittu_1_kdsphq.jpg" alt="Member 9">
+        </div>
+    </div>
+</section>
+
+<section id="mittu" class="member-details">
+    <div class="member right" style="background-image: url('https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289225/Bappa%20Youth%20All%20years%20Photos/Youth%20Members/mittu_2_oz6l9b.jpg');">
+        <div>
+            <h2 class="rowdies-light">sai kiran</h2>
+            <h3 class="gruppo-regular">Youth member</h3>
+            <a class="cookie-regular" href="">
+                <img src="https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289163/Bappa%20Youth%20All%20years%20Photos/Backgrounds/instagram_1_vcy2aw.svg" alt="In">
+                @mittu
+            </a>
+            <img class="member-image" src="https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289225/Bappa%20Youth%20All%20years%20Photos/Youth%20Members/Mittu_1_oddkgr.jpg" alt="Member 11">
+        </div>
+    </div>
+</section>
+
+<section id="pintu" class="member-details">
+    <div class="member black" style="background-image: url('https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289226/Bappa%20Youth%20All%20years%20Photos/Youth%20Members/Pintu_2_b2v2jc.jpg');">
+        <div>
+            <h2 class="rowdies-light">swaroop kumar</h2>
+            <h3 class="gruppo-regular">Youth member</h3>
+            <a class="cookie-regular" href="">
+                <img src="https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289165/Bappa%20Youth%20All%20years%20Photos/Backgrounds/instagram_h1h2zk.svg" alt="In">
+                @pintu
+            </a>
+            <img class="member-image" src="https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289226/Bappa%20Youth%20All%20years%20Photos/Youth%20Members/Pintu_1_q00nkf.jpg" alt="Member 15">
+        </div>
+    </div>
+</section>
+
+<section id="prem" class="member-details">
+    <div class="member right" style="background-image: url('https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289227/Bappa%20Youth%20All%20years%20Photos/Youth%20Members/prem_2_lu1hpc.jpg');">
+        <div>
+            <h2 class="rowdies-light">Prem kumar</h2>
+            <h3 class="gruppo-regular">Youth member</h3>
+            <a class="cookie-regular" href="">
+                <img src="https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289163/Bappa%20Youth%20All%20years%20Photos/Backgrounds/instagram_1_vcy2aw.svg" alt="In">
+                @prem
+            </a>
+            <img class="member-image" src="https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289226/Bappa%20Youth%20All%20years%20Photos/Youth%20Members/prem_1_qnfmee.jpg" alt="Member 16">
+        </div>
+    </div>
+</section>
+
+<section id="raju" class="member-details">
+    <div class="member right" style="background-image: url('https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289228/Bappa%20Youth%20All%20years%20Photos/Youth%20Members/Raju_2_cnfc0t.jpg');">
+        <div>
+            <h2 class="rowdies-light">Raju</h2>
+            <h3 class="gruppo-regular">Youth member</h3>
+            <a class="cookie-regular" href="">
+                <img src="https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289163/Bappa%20Youth%20All%20years%20Photos/Backgrounds/instagram_1_vcy2aw.svg" alt="In">
+                @raju
+            </a>
+            <img class="member-image" src="https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289227/Bappa%20Youth%20All%20years%20Photos/Youth%20Members/raju_1_lgw83g.jpg" alt="Member 18">
+        </div>
+    </div>
+</section>
+
+<section id="rohit" class="member-details">
+    <div class="member right" style="background-image: url('https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289229/Bappa%20Youth%20All%20years%20Photos/Youth%20Members/rohith_2_xbaly8.jpg');">
+        <div>
+            <h2 class="rowdies-light">d.Rohit kumar</h2>
+            <h3 class="gruppo-regular">Youth member</h3>
+            <a class="cookie-regular" href="">
+                <img src="https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289163/Bappa%20Youth%20All%20years%20Photos/Backgrounds/instagram_1_vcy2aw.svg" alt="In">
+                @rohit
+            </a>
+            <img class="member-image" src="https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289229/Bappa%20Youth%20All%20years%20Photos/Youth%20Members/rohith_1_smlymt.jpg" alt="Member 20">
+        </div>
+    </div>
+</section>
+
+<section id="revanth" class="member-details">
+    <div class="member" style="background-image: url('https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289228/Bappa%20Youth%20All%20years%20Photos/Youth%20Members/revanth_2_r8nap1.jpg');">
+        <div>
+            <h2 class="rowdies-light">d.Revanth</h2>
+            <h3 class="gruppo-regular">Youth member</h3>
+            <a class="cookie-regular" href="">
+                <img src="https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289163/Bappa%20Youth%20All%20years%20Photos/Backgrounds/instagram_1_vcy2aw.svg" alt="In">
+                @revanth
+            </a>
+            <img class="member-image" src="https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289228/Bappa%20Youth%20All%20years%20Photos/Youth%20Members/revanth_1_ykuwri.jpg" alt="Member 19">
+        </div>
+    </div>
+</section>
+
+<section id="sunny" class="member-details">
+    <div class="member" style="background-image: url('https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289230/Bappa%20Youth%20All%20years%20Photos/Youth%20Members/sunny_2_tgc91q.jpg');">
+        <div>
+            <h2 class="rowdies-light">Sunny</h2>
+            <h3 class="gruppo-regular">Youth member</h3>
+            <a class="cookie-regular" href="">
+                <img src="https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289163/Bappa%20Youth%20All%20years%20Photos/Backgrounds/instagram_1_vcy2aw.svg" alt="In">
+                @sunny
+            </a>
+            <img class="member-image" src="https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289229/Bappa%20Youth%20All%20years%20Photos/Youth%20Members/sunny_1_yhghli.jpg" alt="Member 22">
+        </div>
+    </div>
+</section>
+
+<section id="vamshi" class="member-details">
+    <div class="member" style="background-image: url('https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289230/Bappa%20Youth%20All%20years%20Photos/Youth%20Members/Vamshi_2_urjxyk.jpg');">
+        <div>
+            <h2 class="rowdies-light">bashipally Vamshi</h2>
+            <h3 class="gruppo-regular">Youth member</h3>
+            <a class="cookie-regular" href="">
+                <img src="https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289163/Bappa%20Youth%20All%20years%20Photos/Backgrounds/instagram_1_vcy2aw.svg" alt="In">
+                @vamshi
+            </a>
+            <img class="member-image" src="https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289230/Bappa%20Youth%20All%20years%20Photos/Youth%20Members/vamshi_1_bah1mc.jpg" alt="Member 24">
+        </div>
+    </div>
+</section>
+
+<section id="srivardhan" class="member-details">
+    <div class="member black" style="background-image: url('https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289229/Bappa%20Youth%20All%20years%20Photos/Youth%20Members/Srivardhan_2_tpgkty.jpg');">
+        <div>
+            <h2 class="rowdies-light">Srivardhan</h2>
+            <h3 class="gruppo-regular">Youth member</h3>
+            <a class="cookie-regular" href="">
+                <img src="https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289165/Bappa%20Youth%20All%20years%20Photos/Backgrounds/instagram_h1h2zk.svg" alt="In">
+                @srivardhan
+            </a>
+            <img class="member-image" src="https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289229/Bappa%20Youth%20All%20years%20Photos/Youth%20Members/Srivardhan_1_jka1gs.jpg" alt="Member 21">
+        </div>
+    </div>
+</section>
+
+<section id="trinkul" class="member-details">
+    <div class="member" style="background-image: url('https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289230/Bappa%20Youth%20All%20years%20Photos/Youth%20Members/Trinkul_2_m98xjb.jpg');">
+        <div>
+            <h2 class="rowdies-light">nihith</h2>
+            <h3 class="gruppo-regular">Youth member</h3>
+            <a class="cookie-regular" href="">
+                <img src="https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289163/Bappa%20Youth%20All%20years%20Photos/Backgrounds/instagram_1_vcy2aw.svg" alt="In">
+                @trinkul
+            </a>
+            <img class="member-image" src="https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289230/Bappa%20Youth%20All%20years%20Photos/Youth%20Members/Trinkul_1_zaumjo.jpg" alt="Member 23">
+        </div>
+    </div>
+</section>
+
+<section id="lallu" class="member-details">
+    <div class="member" style="background-image: url('https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289225/Bappa%20Youth%20All%20years%20Photos/Youth%20Members/lallu_2_mze71r.jpg');">
+        <div>
+            <h2 class="rowdies-light">mahesh chandra</h2>
+            <h3 class="gruppo-regular">Youth member</h3>
+            <a class="cookie-regular" href="">
+                <img src="https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289163/Bappa%20Youth%20All%20years%20Photos/Backgrounds/instagram_1_vcy2aw.svg" alt="In">
+                @lallu
+            </a>
+            <img class="member-image" src="https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289225/Bappa%20Youth%20All%20years%20Photos/Youth%20Members/lallu_1_ts8zk8.jpg" alt="Member 10">
+        </div>
+    </div>
+</section>
+
+<section id="rahul" class="member-details">
+    <div class="member right black" style="background-image: url('https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289227/Bappa%20Youth%20All%20years%20Photos/Youth%20Members/rahul_2_xvmbk3.jpg');">
+        <div>
+            <h2 class="rowdies-light">kamboji Rahul</h2>
+            <h3 class="gruppo-regular">Youth member</h3>
+            <a class="cookie-regular" href="">
+                <img src="https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289165/Bappa%20Youth%20All%20years%20Photos/Backgrounds/instagram_h1h2zk.svg" alt="In">
+                @rahul
+            </a>
+            <img class="member-image" src="https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289227/Bappa%20Youth%20All%20years%20Photos/Youth%20Members/rahul_1_dz2vuu.jpg" alt="Member 17">
+        </div>
+    </div>
+</section>
+
+<section id="bunny" class="member-details">
+    <div class="member" style="background-image: url('https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289223/Bappa%20Youth%20All%20years%20Photos/Youth%20Members/bunny_2_mievab.jpg');">
+        <div>
+            <h2 class="rowdies-light">paka charan</h2>
+            <h3 class="gruppo-regular">Youth member</h3>
+            <a class="cookie-regular" href="">
+                <img src="https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289163/Bappa%20Youth%20All%20years%20Photos/Backgrounds/instagram_1_vcy2aw.svg" alt="In">
+                @BU
+            </a>
+            <img class="member-image" src="https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289222/Bappa%20Youth%20All%20years%20Photos/Youth%20Members/BUnny_1_zkcmi9.jpg" alt="Member 4">
+        </div>
+    </div>
+</section>
+
+<section id="charan" class="member-details">
+    <div class="member black right" style="background-image: url('https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289223/Bappa%20Youth%20All%20years%20Photos/Youth%20Members/Charan_2_epmgv2.jpg');">
+        <div>
+            <h2 class="rowdies-light">kyadari deviCharan</h2>
+            <h3 class="gruppo-regular">Youth member</h3>
+            <a class="cookie-regular" href="">
+                <img src="https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289165/Bappa%20Youth%20All%20years%20Photos/Backgrounds/instagram_h1h2zk.svg" alt="In">
+                @charan
+            </a>
+            <img class="member-image" src="https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289223/Bappa%20Youth%20All%20years%20Photos/Youth%20Members/charan_1_n8kitq.jpg" alt="Member 5">
+        </div>
+    </div>
+</section>
+
+<section id="rocky" class="member-details">
+    <div class="member black" style="background-image: url('https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289229/Bappa%20Youth%20All%20years%20Photos/Youth%20Members/rocky_2_zsrkqs.jpg');">
+        <div>
+            <h2 class="rowdies-light">rakesh</h2>
+            <h3 class="gruppo-regular">Youth member</h3>
+            <a class="cookie-regular" href="">
+                <img src="https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289165/Bappa%20Youth%20All%20years%20Photos/Backgrounds/instagram_h1h2zk.svg" alt="In">
+                @rohit
+            </a>
+            <img class="member-image" src="https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289229/Bappa%20Youth%20All%20years%20Photos/Youth%20Members/Rocky_1_upqius.jpg" alt="Member 20">
+        </div>
+    </div>
+</section>
+
+<section id="omkar" class="member-details">
+    <div class="member" style="background-image: url('https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289226/Bappa%20Youth%20All%20years%20Photos/Youth%20Members/omkar_2_ityuog.jpg');">
+        <div>
+            <h2 class="rowdies-light">Omkar kyadari</h2>
+            <h3 class="gruppo-regular">Youth member</h3>
+            <a class="cookie-regular" href="">
+                <img src="https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289163/Bappa%20Youth%20All%20years%20Photos/Backgrounds/instagram_1_vcy2aw.svg" alt="In">
+                @omkar
+            </a>
+            <img class="member-image" src="https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289227/Bappa%20Youth%20All%20years%20Photos/Youth%20Members/Omkar_1_l6waac.jpg" alt="Member 13">
+        </div>
+    </div>
+</section>
+
+    <section id="about" class="about-us">
+        <div>
+
+        <h2 class="cinzel-decorative-regular">About Us</h2>
+        <p>Bappa Youth is an Ganesh association maintained by some youngster's in Beedi Workers Colony, Kamareddy, Telangana State.</p>
+        <p>We Started our first Ganesh on 2020 with a small budget, we celebrate ganesh festival with our friends and family. All the colony members supported our Youth</p>
+        <p>Since 2023 we are supposed to put Durga Matha but in 2024 we also put Durga Matha in our colony.</p>
+        <h3 class="gruppo-regular">Address:</h3>
+        <p>Beedi Workers Colony, Kamareddy, Telangana State.</p>
+    </div>
+
+    </section>
+    <section class="thumbnail">
+        <div class="thumbnail-content">
+
+            <img class="thum-logo" src="https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289166/Bappa%20Youth%20All%20years%20Photos/Backgrounds/Bappa_Youth_WEB_1_kiaikb.svg" alt="thumbnail" >
+            <div style="text-align: center;">
+                <p class="gruppo-regular">Thumbnail Makers Is an official account, Who make POSTERS to the Bappa Youth</p>
+                <img class="thum-image" src="https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289163/Bappa%20Youth%20All%20years%20Photos/Backgrounds/instagram_1_vcy2aw.svg" alt="in">
+            </div>
+            
+        </div>
+    </section>
+
+    <footer id="follow" class="follow-us">
+        <div class="follow-us-content">
+<div>
+
+    <h2 class="cinzel-decorative-regular">Follow Us:</h2>
+    <div class="social-icons">
+        <a href="#"><img src="https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289165/Bappa%20Youth%20All%20years%20Photos/Backgrounds/instagram_h1h2zk.svg" alt="Instagram"></a>
+        <a href="#"><img src="https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289166/Bappa%20Youth%20All%20years%20Photos/Backgrounds/youtube_p0woz5.svg" alt="YouTube"></a>
+        <a href="#"><img src="https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289163/Bappa%20Youth%20All%20years%20Photos/Backgrounds/facebook_fddhwu.svg" alt="Facebook"></a>
+    </div>
+</div>
+            <img class="follow-us-image" src="https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289166/Bappa%20Youth%20All%20years%20Photos/Backgrounds/Last_page_photo_o3fonf.jpg" alt="">
+        </div>
+    </footer>
+    <script src="index.js"></script>
+</body>
+</html>
