@@ -93,11 +93,17 @@ nav a {
   text-decoration: none;
 }
 
+nav a:hover {
+    color: #156669;
+    transition: color 0.3s ease-in-out;
+}
+
 /* Hero section */
 .hero {
   position: relative;
   text-align: center;
   background-color: #000;
+  animation: fadeIn 2s ease-in-out;
 }
 
 .hero-image {
@@ -140,6 +146,34 @@ nav a {
   border-radius: 5px;
   text-decoration: none;
   border: none;
+  animation: bounce 2s infinite;
+}
+
+.view-more-button:hover {
+    background-color: #156669;
+    color: #fff;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
 }
 
 /* Celebration section */
@@ -186,6 +220,12 @@ nav a {
   text-decoration: underline;
   margin-top: 40px;
   margin-bottom: 40px;
+}
+
+.years a:hover {
+    color: #156669;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out, text-decoration 0.3s ease-in-out;
 }
 
 /* Memories section */
@@ -275,10 +315,16 @@ nav a {
   margin-bottom: 0.5em;
 }
 
+.member-grid img:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+}
+
 .member-details {
   display: flex;
   flex-direction: column;
   align-items: center;
+  animation: slideIn 1s ease-in-out;
 }
 
 .member {
@@ -326,6 +372,7 @@ nav a {
   height: 150px;
   border: 5px solid #eee;
   box-shadow: #333 10px 10px 100px;
+  animation: zoomIn 1s ease-in-out;
 }
 
 .member a img {
@@ -348,6 +395,34 @@ nav a {
   gap: 10px;
   margin-bottom: 30px;
   text-shadow: 2px 2px 10px #333;
+}
+
+.member a:hover {
+    color: #156669;
+    text-shadow: 2px 2px 10px #000;
+    transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
 @media (max-width: 768px) {
@@ -430,6 +505,11 @@ nav a {
   color: #156669;
 }
 
+.about-us:hover {
+    background-color: rgba(241, 252, 126, 0.9);
+    transition: background-color 0.3s ease-in-out;
+}
+
 /* Follow us section */
 .follow-us {
   background-image: url("https://res.cloudinary.com/dbs9akgm5/image/upload/v1740289165/Bappa%20Youth%20All%20years%20Photos/Backgrounds/Last_page_background_hx13a8.jpg");
@@ -462,11 +542,21 @@ nav a {
   height: 100px;
 }
 
+.social-icons a:hover img {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+}
+
 .follow-us-image {
   width: 40%;
   height: 80%;
   border-radius: 20px;
   border: #eee 4px solid;
+}
+
+.follow-us-image:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
 }
 
 .thumbnail {
@@ -501,6 +591,11 @@ nav a {
   height: 100%;
   object-fit: cover;
   border-radius: 5px;
+}
+
+.thumbnail-content:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+    transition: background-color 0.3s ease-in-out;
 }
 
 @media (max-width: 768px) {
