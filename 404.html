@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Redirecting...</title>
+    <script type="text/javascript">
+      // Get the path from the URL, like "/omkar/profile/123"
+      const path = window.location.pathname;
+
+      // Keep the query string and hash, if they exist
+      const q = window.location.search;
+      const h = window.location.hash;
+      
+      // Redirect to index.html, passing the original path as a parameter
+      window.location.replace('/omkar/?path=' + path + q + h);
+    </script>
+  </head>
+  <body>
+    </body>
+</html>
