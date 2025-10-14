@@ -22,24 +22,32 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Cinzel+Decorative:wght@400;700;900&family=Cookie&family=Gruppo&family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
     <script type="text/javascript">
-        // This script runs as soon as the page loads
-        function redirect() {
-            const userAgent = navigator.userAgent || navigator.vendor || window.opera;
-            const androidUrl = "https://play.google.com/store/apps/details?id=com.purpus.dev&authuser=8&hl=en-US&ah=dosOgJkRh0Li45ci0tPIQ56H-cY"; // Your PROD package name
-            const iosUrl = "https://apps.apple.com/us/app/your-app-name/idYOUR_APP_ID"; // Your App Store URL
+(function() {
+  const currentPath = window.location.pathname;
 
-            // Check for iOS
-            if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-                window.location.replace(iosUrl);
-            } 
-            // Check for Android or default to it
-            else {
-                window.location.replace(androidUrl);
-            }
-        }
-        // Call the function
-        redirect();
-    </script>
+  // Only trigger app redirect when path is "/profile"
+  if (currentPath === "/omkar/profile" || currentPath === "/profile") {
+    const androidAppLink = "intent://profile#Intent;scheme=purpus;package=com.purpus.dev;end";
+    const playStoreLink = "https://play.google.com/store/apps/details?id=com.purpus.dev";
+
+    const ua = navigator.userAgent.toLowerCase();
+
+    if (/android/.test(ua)) {
+      window.location.href = androidAppLink;
+      setTimeout(() => {
+        window.location.href = playStoreLink;
+      }, 2000);
+    } else if (/iphone|ipad|ipod/.test(ua)) {
+      window.location.href = "your-ios-universal-link-here";
+    } else {
+      window.location.href = playStoreLink;
+    }
+  } 
+  // else do nothing → show normal website
+})();
+</script>
+
+
 </head>
     <body>
     
