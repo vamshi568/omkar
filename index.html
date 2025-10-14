@@ -21,34 +21,40 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Cinzel+Decorative:wght@400;700;900&family=Cookie&family=Gruppo&family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
-    <script type="text/javascript">
+   <script type="text/javascript">
 (function() {
   // Get the path from the query parameter sent by 404.html
   const params = new URLSearchParams(window.location.search);
-  const path = params.get('path');
+  const path = params.get('path'); // e.g., "/omkar/profile/1234"
   
   // Only trigger the redirect if the path contains "/profile"
   if (path && path.includes("/profile")) {
-    const androidAppLink = "intent://profile#Intent;scheme=purpus;package=com.purpus.dev;end";
-    const playStoreLink = "https://play.google.com/store/apps/details?id=com.purpus.dev";
     
-    // Fallback timer
-    const timer = setTimeout(() => {
-      window.location.href = playStoreLink;
-    }, 1500);
+    // 1. Get the ID from the end of the path
+    const pathParts = path.split('/');
+    const userId = pathParts.pop(); // This gets the last part, e.g., "1234"
 
-    // Try to open the app
-    window.location.href = androidAppLink;
-    
-    // If the app opens, the timer won't fire.
-    // We add listeners to clear the timer if the page is hidden (app opened).
-    document.addEventListener('visibilitychange', () => {
-      if (document.visibilityState === 'hidden') {
-        clearTimeout(timer);
-      }
-    });
-    window.addEventListener('pagehide', () => clearTimeout(timer));
+    if (userId) {
+      // 2. Build the custom app link WITH the user ID
+      const appLink = `purpus://profile?id=${userId}`;
+      const playStoreLink = "https://play.google.com/store/apps/details?id=com.purpus.dev";
+      
+      // Fallback timer
+      const timer = setTimeout(() => {
+        window.location.href = playStoreLink;
+      }, 1500);
 
+      // Try to open the app
+      window.location.href = appLink;
+      
+      // If the app opens, the timer won't fire.
+      document.addEventListener('visibilitychange', () => {
+        if (document.visibilityState === 'hidden') {
+          clearTimeout(timer);
+        }
+      });
+      window.addEventListener('pagehide', () => clearTimeout(timer));
+    }
   } 
   // else do nothing → show the normal website content
 })();
