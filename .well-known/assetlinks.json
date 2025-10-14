@@ -1,0 +1,24 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.org.orbit",
+    "sha256_cert_fingerprints": ["CB:87:C7:FE:95:C9:7E:1D:A9:74:93:16:A7:38:3F:48:07:0D:A5:CE:5D:4F:68:D8:12:A1:92:56:12:30:6E:ED"]
+  }
+},
+{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.purpus.dev",
+    "sha256_cert_fingerprints": ["CB:87:C7:FE:95:C9:7E:1D:A9:74:93:16:A7:38:3F:48:07:0D:A5:CE:5D:4F:68:D8:12:A1:92:56:12:30:6E:ED"]
+  }
+},
+{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.purpus",
+    "sha256_cert_fingerprints": ["CB:87:C7:FE:95:C9:7E:1D:A9:74:93:16:A7:38:3F:48:07:0D:A5:CE:5D:4F:68:D8:12:A1:92:56:12:30:6E:ED"]
+  }
+}]
